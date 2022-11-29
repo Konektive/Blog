@@ -1,8 +1,5 @@
 import React from 'react'
-import {NavLink } from 'react-router-dom'
-import App from '../App'
-import About from './About'
-import Contact from './Contact'
+import { NavLink } from 'react-router-dom'
 
  const Nav = () => {
     return (
