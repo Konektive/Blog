@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,700;1,400&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -22,16 +24,32 @@
 nav {
   position: absolute;
   top: 0;
-  left: 0;
+  left:50%;
+  transform: translate(-50%);
   border: 2px solid white;
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: space-around;
   margin-bottom: 4rem;
+  font-family:'Cormorant',serif;
+  
 }
 
 nav ul li {
   list-style: none;
+  
+}
+nav a {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: rgb(230, 221, 222);
+  padding: 10px;
+  text-decoration: none;
+}
+nav a:hover{
+  opacity: 0.9;
+  text-decoration: underline;
 }
 
 
@@ -49,6 +67,6 @@ nav ul li {
   align-items: flex-start;
 }
 
-.card div:hover{
+.card span{
 cursor: pointer;
 }

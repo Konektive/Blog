@@ -1,26 +1,28 @@
 import './App.css'
-import Posts from './components/Posts'
 import Nav from './components/Nav'
 import { Routes, Route } from 'react-router-dom'
-import About from './components/About'
-import Contact from './components/Contact'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+import SinglePost from './pages/SinglePost'
+import Header from './components/Header'
+
 
 
 function App() {
   return (
     <>
-      <Nav/>
-      <div className="card">
-        <Posts />
-      </div>
-      <Routes>
-                {/* <Route path='/' element={<App />} /> */}
-                <Route path='/about' element={<About/>} />
-                <Route path='/contact' element={<Contact/>} />
-                {/* <Route path='*' element={<App/>} /> */}
-            </Routes>
+      <Nav />
+      <Header/>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/:id' element={<SinglePost />}></Route>
+          <Route path='*'element={<Home/>}></Route>
+          </Routes>
       </>
   )
 }
-// need to move POSTS to another 'Page' so it wont get into infinite loop and wont show even after changing site
+
 export default App
