@@ -12,13 +12,6 @@
   padding: 2em;
 }
 
-.wrapper {
-  border:2px solid white;
-  padding:20px 40px;
-  border-radius: 10px;
-  max-width: 400px;
-}
-
 
 /* navbar css properies  */
 nav {
@@ -50,23 +43,4 @@ nav a {
 nav a:hover{
   opacity: 0.9;
   text-decoration: underline;
-}
-
-
-/* styling posts wrapper */
-
-.card {
-  max-width: 1440px;
-  position: absolute;
-  top: 150px;
-  left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.card span{
-cursor: pointer;
 }
