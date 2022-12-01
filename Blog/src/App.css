@@ -6,41 +6,7 @@
   padding: 0;
   text-align: center;
   box-sizing: border-box;
-}
-
-.card {
-  padding: 2em;
+  font-family: Cormorant,sans-serif;
 }
 
 
-/* navbar css properies  */
-nav {
-  position: absolute;
-  top: 0;
-  left:50%;
-  transform: translate(-50%);
-  border: 2px solid white;
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 4rem;
-  font-family:'Cormorant',serif;
-  
-}
-
-nav ul li {
-  list-style: none;
-  
-}
-nav a {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 3rem;
-  color: rgb(230, 221, 222);
-  padding: 10px;
-  text-decoration: none;
-}
-nav a:hover{
-  opacity: 0.9;
-  text-decoration: underline;
-}

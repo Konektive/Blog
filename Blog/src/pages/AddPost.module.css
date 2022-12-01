@@ -1,0 +1,47 @@
+.newPost input {
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translate(-50%);
+    height: 2rem;
+    width: 15rem;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+    .newPost h1{
+    position: absolute;
+    top: 8vh;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.newPost textarea{
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60vw;
+    height: 400px;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.newPost button {
+    position:absolute;
+    bottom: 20vh;
+    left: 50%;
+    transform: translate(-50%);
+    height: 3rem;
+    width: auto;
+    padding: 0 15px 0 15px;
+    border-radius: 5px;
+    border: none;
+}
+.newPost button:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}

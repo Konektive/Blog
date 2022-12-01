@@ -1,8 +1,10 @@
 import React from 'react'
+import classes from './Header.module.css'
+import image from '../assets/skate.jpg'
 
 const Header = () => {
   return (
-    <div className='header-image'></div>
+    <header className={classes.header}><img src={image} alt="" /></header>
   )
 }
 

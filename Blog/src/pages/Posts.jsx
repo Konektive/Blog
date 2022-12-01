@@ -14,20 +14,20 @@ const Posts = () => {
     }).then((res) => {
       setPosts(res.data);
     });
-  }, []);
+  }, [posts.length]);
 
-
-  return posts.map((post) => {
+ 
+  return  posts.map((post) => {
     const item = new Date(post.date)
     const year = item.getFullYear()
     const month = item.getMonth()
     const day = item.getDay()
-    return (
-      <NavLink key={post._id} to={`/${post._id}`}>
-      <div className={classes.wrapper} >
+      return (
+      <div  key={post._id} className={classes.wrapper} >
         <div className={classes.img}>
           <img src={image} alt="Landscape" />
         </div>
+        <NavLink to={`/${post._id}`}>
             <div className={classes.info}>
             <h1>{post.title}</h1>
             <h2>{`${year}:${month}:${day}`}</h2>
@@ -36,10 +36,11 @@ const Posts = () => {
             {/* Decide if u want to have a read more span or full post to be a link to it  */}
             {/* <span><NavLink to={`/${post._id}`}>Read more...</NavLink></span>   */}
         </div>
-        </div>
         </NavLink>
-    );
-  });
+        </div>
+    )
+  })
+  
 };
 
 export default Posts;

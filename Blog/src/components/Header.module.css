@@ -1,0 +1,17 @@
+.header {
+    position: absolute;
+    top: 10vh;
+    left: 10%;
+    right: 10%;
+    width: 80vw;
+    height: 50vh;
+    background-color: white;
+    z-index: -1;
+    border-radius : 49% 51% 50% 50% / 19% 19% 81% 81%;
+    overflow: hidden;
+}
+.header img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+}

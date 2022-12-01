@@ -1,25 +1,24 @@
 import './App.css'
 import Nav from './components/Nav'
 import { Routes, Route } from 'react-router-dom'
-import About from './pages/About'
+import AddPost from './pages/AddPost'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
 import SinglePost from './pages/SinglePost'
-import Header from './components/Header'
-
+import Delete from './pages/Delete'
 
 
 function App() {
   return (
     <>
       <Nav />
-      <Header/>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About/>} />
+          <Route path='/add' element={<AddPost/>} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/:id' element={<SinglePost />}></Route>
-          <Route path='*'element={<Home/>}></Route>
+          <Route path='/delete' element={<Delete/>}/>
+          <Route path='/:id' element={<SinglePost />}/>
+          <Route path='*'element={<Home/>}/>
           </Routes>
       </>
   )
