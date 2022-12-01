@@ -1,12 +1,16 @@
 import React from 'react'
 import Posts from './Posts'
 import classes from './Home.module.css'
+import Header from '../components/Header'
 
 const Home = () => {
-    return (
+  return (
+    <>
+      <Header/>
       <div className={classes.card}>
         <Posts />
       </div>
+      </>
   )
 }
 

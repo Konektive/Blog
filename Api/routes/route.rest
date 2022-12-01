@@ -2,12 +2,12 @@ GET http://localhost:4000/posts
 
 ###
 
-POST http://localhost:4000/posts
+POST http://localhost:4000/add
 Content-Type: application/json
 
 {
-    "title": "Mongo DB 1",
-    "text": "Mongo DB is best database ever 1"
+    "title": "Mongo DB 6",
+    "text": "Mongo DB is best database ever 6"
 }
 
 ###
@@ -20,3 +20,14 @@ GET http://localhost:4000/posts/637ff1a42fbec8accd35dc34
 
 
 DELETE http://localhost:4000/posts/637ff22180cc997b6d58ae85
+
+###
+
+POST http://localhost:4000/contact
+Content-Type: application/json
+
+{
+    "name" : "Krystian",
+    "email" : "krystiansporysz@gmail.com",
+    "message" : "Wszystko działa i Hania u ciebie zostaje na noc"
+}
