@@ -1,13 +1,14 @@
 import React from 'react'
 import { useState } from 'react';
 import classes from './Contact.module.css'
+import axios from 'axios'
 
 const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  // const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault()
 
