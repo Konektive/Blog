@@ -1,17 +1,133 @@
-.header {
-    position: absolute;
-    top: 10vh;
-    left: 10%;
-    right: 10%;
-    width: 80vw;
-    height: 50vh;
-    background-color: white;
-    z-index: -1;
-    border-radius : 49% 51% 50% 50% / 19% 19% 81% 81%;
-    overflow: hidden;
+.left {
+position: absolute;
+left: 0;
+top: 0;
+width: 50%;
+height: 100vh;
+background-color: rgb(15, 15, 15);
+z-index: -5;
 }
-.header img {
-    height: 100%;
+.left h1 {
+    position: absolute;
+    top: 50%;
+    left: 10vw;
+    font-size: 7rem;
+    color: white;
+    z-index: 5;
+}
+
+.right {
+position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(210, 210, 210);
+    z-index: -5;
+}
+.right h1 {
+    position: absolute;
+    top: 50%;
+    right: 10vw;
+    font-size: 7rem;
+    color: rgb(26, 26, 26);
+    z-index: 5;
+}
+
+.left img, .right img {
     width: 100%;
-    object-fit: cover
+    height: 100%;
+    opacity: 0.1;
+    object-fit: cover;
+}
+
+.statue img {
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    opacity: 1;
+    animation: statueSlide 1200ms ease-out;
+    z-index: 10;
+}
+
+.book1 img{
+    position: absolute;
+    top: 30vh;
+    left: 5vw;
+    height: 20%;
+    transform: rotate(-20deg);
+    animation: bookLeftSlide 1200ms ease-out;
+    
+}
+.book2 img{
+    position: absolute;
+    top: 60vh;
+    left: 20vw;
+    height: 15%;
+    transform: rotate(-15deg);
+    animation: bookLeftSlide 1200ms ease-out;
+}
+.book3 img{
+    position: absolute;
+    top: 80vh;
+    left: 5vw;
+    height: 20%;
+    transform: rotate(90deg);
+    animation: bookLeftSlide 1200ms ease-out;
+}
+.book4 img{
+    position: absolute;
+    top: 70vh;
+    right: -1vw;
+    height: 20%;
+    /* filter: blur(2px); */
+    rotate: 30deg;
+    animation: bookRightSlide 1200ms ease-out;
+    z-index: -4;
+}
+.book5 img{
+    position: absolute;
+    top: 25vh;
+    right: 10vw;
+    height: 20%;
+    transform: rotate(30deg);
+    animation: bookRightSlide 1200ms ease-out;
+    z-index: -4;
+}
+.book6 img{
+    position: absolute;
+    top: 60vh;
+    right: 25vw;
+    height: 15%;
+    transform: rotate(30deg);
+    animation: bookRightSlide 1200ms ease-out;
+    z-index: -4;
+}
+
+
+
+@keyframes bookLeftSlide {
+    from{
+        filter: blur(5px);
+        top: 80vh;
+        left: 45vw;
+    }
+}
+
+@keyframes bookRightSlide {
+    from{
+        filter: blur(5px);
+        top: 80vh;
+        right: 45vw;
+    }
+}
+
+@keyframes statueSlide {
+    from{
+        bottom: -20%;
+    }
 }

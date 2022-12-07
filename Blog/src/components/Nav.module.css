@@ -4,17 +4,33 @@
     left: 10%;
     right: 10%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 4rem;
-    font-family: 'Cormorant', serif;
-    background-color: rgb(197, 197, 197);
+    font-family: 'Anton', sans-serif;
 
 }
 
 .nav ul li {
     list-style: none;
-
 }
+
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.right {
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 50%;
+    display: flex;
+    justify-content:space-around;
+}
+
 
 .nav a {
     font-size: 3rem;
@@ -23,6 +39,11 @@
     color: rgb(0, 0, 0);
     padding: 10px;
     text-decoration: none;
+    font-size: 2.5rem;
+}
+
+.white a{
+    color: white;
 }
 
 .nav a:hover {

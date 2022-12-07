@@ -5,19 +5,24 @@ import classes from './Nav.module.css'
  const Nav = () => {
     return (
       <>
-        <nav className={classes.nav}>
+            <nav className={classes.nav}>
+                <div className={classes.left}>
             <ul>
-                <li><NavLink to='/'>Home</NavLink></li>
+                <li className={classes.white}><NavLink to='/'>Home</NavLink></li>
             </ul>
+             <ul>
+                <li className={classes.white}><NavLink to='/contact'>Contact</NavLink></li>
+            </ul>
+                </div>
+
+                <div className={classes.right}>
             <ul>
                 <li><NavLink to='/add'>Add Post</NavLink></li>
             </ul>
              <ul>
-                <li><NavLink to='/contact'>Contact</NavLink></li>
-            </ul>
-             <ul>
                 <li><NavLink to='/delete'>Delete Posts</NavLink></li>
             </ul>
+                </div>
         </nav>
             </>
   )
