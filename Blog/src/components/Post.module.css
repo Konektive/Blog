@@ -1,0 +1,54 @@
+.wrapper {
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: 50vw;
+    position: relative;
+    background-color: aquamarine;
+}
+.wrapper a {
+    text-decoration: none;
+}
+
+.wrapper .img:hover img{
+    transform: scale(1.1);
+}
+
+.img {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.img img{
+    width: 100%;
+    transition: 300ms;
+    object-fit: contain;
+}
+
+.info {
+    background-color: white;
+    width: 80%;
+    color: black;
+    transform: translate(13%);
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+
+.info h1{
+    color: rgb(14, 14, 14);
+}
+.info h2{
+    color: rgb(40,40,40);
+}
+.info span{
+    color: rgb(114, 114, 114);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.info a {
+    color: black;
+}
+
+

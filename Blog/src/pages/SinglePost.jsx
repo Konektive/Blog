@@ -2,7 +2,6 @@ import React ,{ useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
-
 const SinglePost = () => {
  const [singlePost, setSinglePost] = useState({})
   const { id } = useParams()
@@ -21,6 +20,7 @@ const SinglePost = () => {
     <>
         <h1>{singlePost.title}</h1>
         <span>{singlePost.text}</span>
+
     </>
   )
 }
