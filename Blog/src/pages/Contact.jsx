@@ -2,13 +2,14 @@ import React from 'react'
 import { useState } from 'react';
 import classes from './Contact.module.css'
 import axios from 'axios'
+import FormMessage from '../components/FormMessage';
 
 const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -24,48 +25,61 @@ const Contact = () => {
     setName('')
     setEmail('')
     setMessage('')
-
-
+    
     setTimeout(() => {
-      setSubmitted(true);
-    }, 300);
+      setIsSubmitted(true);
+    }, 200);
   };
 
-  // if (submitted) {
-  //   return (
-  //     <>
-  //       <h2>Thank you!</h2>
-  //       <div>We'll be in touch soon.</div>
-  //     </>
-  //   );
-  // }
-
-  return (<form
+if (isSubmitted) {
+    return (
+      <>
+        <div className={classes.sentMessage}>
+        <h2>Message Sent!</h2>
+        <span>We'll get back to you soon.</span>
+        </div>
+        <FormMessage/>
+      </>
+    )
+  }
+  else if (!isSubmitted) {
+  return (
+        <>
+    <form
       className={classes.form}
       onSubmit={handleSubmit}
       method="POST"
       target="_blank"
     >
-      <div>
-        <input value={name} type="text" placeholder="Your name" onChange={(e) => {
+          <div>
+            <label>Name:</label>
+        <input value={name} type="text" onChange={(e) => {
           setName(e.target.value)
         }} required />
       </div>
-      <div>
-        <input value={email} type="email" placeholder="Email" onChange={(e) => {
+          <div>
+            <label>E-mail:</label>
+        <input value={email} type="email"  onChange={(e) => {
           setEmail(e.target.value)
         }} required />
       </div>
-      <div>
-        <textarea value={message} placeholder="Your message" onChange={(e) => {
+          <div>
+            <label>Message:</label>
+        <textarea value={message} onChange={(e) => {
           setMessage(e.target.value)
         }} required />
       </div>
       <div>
         <button type="submit"> Send a message </button>
       </div>
-    </form>
+        </form>
+      <FormMessage />
+      </>
+
   );
+  }
+
+
 };
 
 export default Contact
