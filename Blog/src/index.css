@@ -22,3 +22,24 @@
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
 }
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #303030 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #303030;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}

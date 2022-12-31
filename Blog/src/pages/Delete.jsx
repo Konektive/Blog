@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Delete.module.css'
-import PostDelete from './PostDelete';
+import PostDelete from '../components/PostDelete';
 
 
 const Delete = () => {

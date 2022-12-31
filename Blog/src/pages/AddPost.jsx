@@ -21,15 +21,17 @@ const About = () => {
     setText('')
   }
   return (
+    <>
     <div className={classes.newPost}>
-      <label><h1>Post Title</h1><label/>
-        <input placeholder='Title...' value={title} onChange={(e)=>{setTitle(e.target.value)}} type="text" />
+      <label><h1>Post Title</h1>
+        <input placeholder='Title...' value={title} onChange={(e)=>{setTitle(e.target.value)}} type="text" required />
       </label>
       <label>
-        <textarea placeholder='Text' value={text} onChange={(e)=>{setText(e.target.value)}} type="text" />
+        <textarea placeholder='Text' value={text} onChange={(e)=>{setText(e.target.value)}} type="text" required />
       </label>
       <button className={classes.button} onClick={send}>Add new post </button>
       </div>
+      </>
   )
 }
 
