@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Post = require("../models/postsModel");
 const Message = require("../models/messageModel");
+const User = require("../models/userModel")
 
 //Getting all posts
 router.get("/posts", async (req, res) => {
@@ -44,6 +45,21 @@ router.delete("/posts/:postId", async (req, res) => {
     res.json(removePost);
   } catch (err) {
     res.json({ message: err.message });
+  }
+});
+
+//Adding new user
+
+router.post("/register", async (req,res) => {
+const user = new User({
+  email: req.body.email,
+  password: req.body.password
+});
+try {
+  const savedUser = await user.save();
+  res.json(savedUser);
+}catch (err){
+    res.json({message : err.message})
   }
 });
 

@@ -14,8 +14,8 @@ app.use("/", blogRouter);
 
 //connecting to database
 
-mongoose.connect(process.env.DATABASE_URL, () => {
-  console.log("database connected");
+mongoose.connect(process.env.POSTS_DATABASE_URL, () => {
+  console.log("Posts database connected");
 });
 
 //listen to server
